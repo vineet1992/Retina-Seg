@@ -17,14 +17,13 @@ This example is best run in a conda environment:
 ```bash
 git lfs clone https://github.com/vineet1992/Retina-Seg/
 cd location_of_repo
-conda env create -n CXR_Age -f environment.yml
-conda activate CXR_Age
-python run_model.py dummy_datasets/test_images/ development/models/PLCO_Fine_Tuned_120419 output/output.csv --modelarch=age --type=continuous --size=224
+conda env create -n Retina_Seg -f environment.yml
+conda activate Retina_Seg
+python Code/seg_ensemble.py test_images/ test_output/ ../model/UNet_Ensemble 10
 ```
 Dummy image files are provided in `test_images/;`. Weights for the segmentation model are in `model/UNet_Ensemble_[0-9].pth`. 
 Output will be written to `test_output/`.
 
 ## Acknowledgements
-I thank the NCI and ACRIN for access to trial data, as well as the PLCO and NLST participants for their contribution to research. I would also like to thank the fastai and Pytorch communities as well as the National Academy of Medicine for their support of this work. A GPU used for this research was donated as an unrestricted gift through the Nvidia Corporation Academic Program. The statements contained herein are mine alone and do not represent or imply concurrence or endorsements by the above individuals or organizations.
-
+I thank the creators of the DRIVE, CHASEdb, STARE databases along with the UK Biobank for access to their datasets. 
 
