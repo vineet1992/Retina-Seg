@@ -1,0 +1,29 @@
+name: Retina_Seg
+channels:
+  - pytorch
+  - fastai
+  - anaconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - docopt=0.6.2=py37_0
+  - fastai=1.0.61=1
+  - fastprogress=0.2.2=py_0
+  - matplotlib=3.2.2=0
+  - matplotlib-base=3.2.2=py37hef1b27d_0
+  - numpy=1.18.5=py37ha1c710e_0
+  - numpy-base=1.18.5=py37hde5b4d6_0
+  - pandas=1.0.5=py37h0573a6f_0
+  - pip=20.1.1=py37_1
+  - python=3.7.7=hcff3b4d_5
+  - python-dateutil=2.8.1=py_0
+  - pytorch=1.5.1
+  - scikit-learn=0.20.1
+  - scipy=1.5.0=py37h0b6359f_0
+  - torchvision=0.6.1=py37_cu102
+  - opencv
+  - pip:
+    - future==0.18.2
+    - munch==2.5.0
+    - pretrainedmodels==0.7.4
+prefix: /home/vraghu/anaconda3/envs/Retina_Seg
