@@ -21,8 +21,16 @@ conda env create -n Retina_Seg -f environment.yml
 conda activate Retina_Seg
 python Code/seg_ensemble.py test_images/ test_output/ ../model/UNet_Ensemble 10
 ```
+
 Dummy image files are provided in `test_images/;`. Weights for the segmentation model are in `model/UNet_Ensemble_[0-9].pth`. 
 Output will be written to `test_output/`.
+
+To run the outlier detection model use the following additional steps
+```bash
+python Code/run_outliers.py ../test_images/ /home/vraghu/Retina/Github/Retina-Seg/model/Outlier_Detector_Resnet_021421 ../test_output/Outlier_Output.csv
+```
+
+Then, the predicted outlier scores will be stored in test_output/Outlier_Output.csv. Please change the image directory to run the model on your images.
 
 ## Acknowledgements
 I thank the creators of the DRIVE, CHASEdb, STARE databases along with the UK Biobank for access to their datasets. 
